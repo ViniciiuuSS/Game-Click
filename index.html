@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+  <title>Testando boot</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="Content.css">
+</head>
+<body>
+    <div class="card-header">
+        <ul class="nav justify-content-center  " for="header">
+            <li class="nav-item" onclick="Tab(1)">
+                <a class="nav-link" aria-current="page">Game</a>
+            </li>
+            <li class="nav-item" onclick="Tab(2)">
+                <a class="nav-link">Upgrade</a>
+            </li>
+        </ul>
+    </div>
+  <main>
+    <div class="Main_Game" id="Main_Game">
+        <div class="Main_Score">
+            <input type="text" name="Score" class="Score" id="Score_value" hidden />
+            <span>Score</span>
+            <input type="text" name="Score" class="Score" id="Score" value="0" disabled="">
+        </div>
+        <div class="Container_Main">
+            <input name="Btn_Main" id="Btn_Main" class="btn btn-primary" type="button" value="" onclick="Click_Main()">
+        </div>
+    </div>
+    <div class="Main_Game UP" id="Main_Upgrade" > 
+        <div class="Main_Score">
+            <input type="text" name="Auto_Score" class="Auto_Score" id="Auto_Score_value" hidden />
+            <span>Quantidade de Score automatico</span>
+            <input type="text" name="Auto_Score" class="Auto_Score" id="Auto_Score" value="0" disabled="">
+        </div>
+        <div class="Container_Main up_container">
+            <input type="text" name="VAuto_Score" class="Auto_Score" id="VAuto_Score_value" value="25" style="pointer-events: none;" width="10px"/>
+            <input type="button" value="UP!" class="Btn_UP" onclick="Click_Up()">
+        </div>
+    </div>
+
+  </main>
+  <script src="Script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
+</body>
+</html>

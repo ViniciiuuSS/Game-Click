@@ -6,8 +6,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-  <link rel="stylesheet" href="Content.css">
+  <script src="https://kit.fontawesome.com/b2f6784773.js" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/fontawesome.min.css" integrity="sha512-giQeaPns4lQTBMRpOOHsYnGw1tGVzbAIHUyHRgn7+6FmiEgGGjaG0T2LZJmAPMzRCl+Cug0ItQ2xDZpTmEc+CQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />  <link rel="stylesheet" href="Content.css">
 </head>
 <body>
     <div class="card-header">
@@ -23,9 +24,17 @@
   <main>
     <div class="Main_Game" id="Main_Game">
         <div class="Main_Score">
-            <input type="text" name="Score" class="Score" id="Score_value" hidden />
-            <span>Score</span>
-            <input type="text" name="Score" class="Score" id="Score" value="0" disabled="">
+            <div class="score_main">
+                <input type="text" name="Score" class="Score" id="Score_value" hidden />
+                <span>Score</span>
+                <input type="text" name="Score" class="Score" id="Score" value="0" disabled="">
+            </div>
+            <div class="Menu_bar_Music">
+                <i onclick="Abre_(0)" class="fa-solid fa-play"></i>
+                <div class="menu" id="menu">
+                    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZF1DX3SNr5BeQZSd?utm_source=generator&theme=0" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>              
+                </div>
+            </div>
         </div>
         <div class="Container_Main">
             <input name="Btn_Main" id="Btn_Main" class="btn btn-primary" type="button" value="" onclick="Click_Main()">
@@ -33,17 +42,23 @@
     </div>
     <div class="Main_Game UP" id="Main_Upgrade" > 
         <div class="Main_Score">
-            <input type="text" name="Auto_Score" class="Auto_Score" id="Auto_Score_value" hidden />
-            <span>Quantidade de Score automatico</span>
-            <input type="text" name="Auto_Score" class="Auto_Score" id="Auto_Score" value="0" disabled="">
+            <div class="score_main">
+                <input type="text" name="Auto_Score" class="Auto_Score" id="Auto_Score_value" hidden />
+                <span>Quantidade de Score automatico</span>
+                <input type="text" name="Auto_Score" class="Auto_Score" id="Auto_Score" value="0" disabled="">
+            </div>
+            <div class="Menu_bar_Music">
+                <i onclick="Abre_(1)" class="fa-solid fa-play"></i>
+                <div class="menu" id="menu_up">
+                    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZF1DX3SNr5BeQZSd?utm_source=generator&theme=0" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>              
+                </div>
+            </div>
         </div>
         <div class="Container_Main up_container">
             <input type="text" name="VAuto_Score" class="Auto_Score" id="VAuto_Score_value" value="25" style="pointer-events: none;" width="10px"/>
             <input type="button" value="UP!" class="Btn_UP" onclick="Click_Up()">
         </div>
     </div>
-
-  </main>
   <script src="Script.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>

@@ -38,3 +38,46 @@ function Tab(item){
         Main_Game.style.display = 'none'
     }
 }
+$(document).mouseup( function (e) {
+    if(e.target.id != 'menu'){
+        $('#menu').css({
+            'animation' : '1s reverse_menu'
+        })
+        $('#menu').fadeOut()
+        $('#menu_up').css({
+            'animation' : '1s reverse_menu'
+        })
+        $('#menu_up').fadeOut()
+    }
+
+ })
+function Abre_(e){
+    if(e == 0){
+        if($('#menu').is(':hidden')){
+            $('#menu').css({
+                'animation' : '1s menu'
+            })
+            $('#menu').fadeIn();
+        }
+        else{
+            $('#menu').css({
+                'animation' : '1s reverse_menu'
+            })
+            $('#menu').fadeOut()
+        }
+    }
+    else{
+        if($('#menu_up').is(':hidden')){
+            $('#menu_up').css({
+                'animation' : '1s menu'
+            })
+            $('#menu_up').fadeIn();
+        }
+        else{
+            $('#menu_up').css({
+                'animation' : '1s reverse_menu'
+            })
+            $('#menu_up').fadeOut()
+        }
+    }
+}

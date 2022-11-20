@@ -37,6 +37,7 @@
             </div>
         </div>
         <div class="Container_Main">
+            <span class="trigger_span" id="sp_t">1+</span>
             <input name="Btn_Main" id="Btn_Main" class="btn btn-primary" type="button" value="" onclick="Click_Main()">
         </div>
     </div>
@@ -44,8 +45,8 @@
         <div class="Main_Score">
             <div class="score_main">
                 <input type="text" name="Auto_Score" class="Auto_Score" id="Auto_Score_value" hidden />
-                <span>Quantidade de Score automatico</span>
-                <input type="text" name="Auto_Score" class="Auto_Score" id="Auto_Score" value="0" disabled="">
+                <span>Score</span>
+                <input type="text" name="Score" class="Score" id="Score_up" value="0" disabled="">
             </div>
             <div class="Menu_bar_Music">
                 <i onclick="Abre_(1)" class="fa-solid fa-play"></i>
@@ -55,8 +56,15 @@
             </div>
         </div>
         <div class="Container_Main up_container">
-            <input type="text" name="VAuto_Score" class="Auto_Score" id="VAuto_Score_value" value="25" style="pointer-events: none;" width="10px"/>
-            <input type="button" value="UP!" class="Btn_UP" onclick="Click_Up()">
+            <div class="up_1">
+                <input type="text" name="VAuto_Score" class="Auto_Score" id="VAuto_Score_value" value="25" style="pointer-events: none;" width="10px"/>
+                <input type="button" value="0" class="Btn_UP" id="Btn_UP" onclick="Click_Up(0)">
+            </div>
+            <div class="up_2">
+                <span>Comprar mão por: <span id="v_hand">1000</span> </span>
+                </br>
+                <i class="fa-regular fa-hand-point-up hand" onclick="add_hand()">&nbsp;<span id="quantidade_hand">0</span><input type="hidden" id="hand_value" value="0"></i> 
+            </div>
         </div>
     </div>
   <script src="Script.js"></script>

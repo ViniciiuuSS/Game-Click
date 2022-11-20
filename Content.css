@@ -105,11 +105,12 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column
 }
 .Btn_UP{
     background-color: royalblue;
-    width: 10%;
-    height: 20%;
+    width: 50%;
+    height: 50%;
     border-radius: 50%;
     color: white;
     border: none;
@@ -137,6 +138,52 @@ main{
     position: fixed;
     right: 100px;
     display: none;
+}
+.up_1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    height: 100%;
+}
+.up_2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    height: 100%;
+}
+.hand{
+    font-size: 90px;
+}
+.hand:hover{
+    filter: drop-shadow(0 0 3px royalblue);
+    cursor: pointer;
+    animation: 1s infinite hand;
+}
+.trigger_span{
+    display: none;
+    filter: drop-shadow(0 0 1px royalblue);
+}
+@keyframes trigger {
+    from{
+        display: flex;
+        transform: translateY(0px);
+    }
+    to{
+        display: none;
+        transform: translateY(-20px);
+    }
+}
+@keyframes hand{
+        25%{
+            transform: translateY(-15px);
+        }
+        50%{
+            transform: translateY(10px);
+        }
 }
 @keyframes menu {
     from{
